@@ -1,0 +1,2 @@
+Pour se connecter en session graphique, c'est simple, il suffit de choisir le nouvel utilisateur et de renseigner son mot de passe au demarrage.
+Pour ce qui est de la connexion SSH, il suffit d'utiliser la commande ssh username@127.0.0.1 -P 8091, etant donne que l'IP est la meme.

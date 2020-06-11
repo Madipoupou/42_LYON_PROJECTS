@@ -1,0 +1,3 @@
+#!/bin/sh
+# Tuer le processus de la commande precedente, laissee en background
+sudo ps | grep tail | cut -f3 -d' ' | xargs sudo kill -9

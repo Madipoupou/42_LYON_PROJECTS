@@ -1,0 +1,3 @@
+#!/bin/sh
+# Identifier l'IP du DNS du domaine slash16.org
+nslookup slash16.org | grep Add | tail -4 | cut -f2 -d' '

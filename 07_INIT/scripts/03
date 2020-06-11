@@ -1,0 +1,195 @@
+#!/bin/bash
+# SMALL TIC TAC TOE GAME
+# 29/12/2018
+
+# Displays header
+ft_header() {
+	echo ""
+	echo ""
+	echo ""
+	echo "        ##############################"
+	echo "        ###       TIC TAC TOE      ###"
+	echo "        ##############################"
+
+}
+
+# Checks if a cell is a 'o', a 'x' or a number
+# Number of the celle given as argument
+ft_init_cell() {
+	if [ "${p1_cells[$1]}" = "1" ]
+	then
+		echo $p1_char
+		return 0
+	elif [ "${p2_cells[$1]}" = "1" ]
+	then
+		echo $p2_char
+		return 0
+	else
+		echo $1
+	fi
+}
+
+# Displays the grid
+# Arg1: list of empty cells - Arg2&3: list of players' cells
+ft_display() {
+	command clear
+	ft_header
+	local v0=$( ft_init_cell 0)
+	local v1=$( ft_init_cell 1)
+	local v2=$( ft_init_cell 2)
+	local v3=$( ft_init_cell 3)
+	local v4=$( ft_init_cell 4)
+	local v5=$( ft_init_cell 5)
+	local v6=$( ft_init_cell 6)
+	local v7=$( ft_init_cell 7)
+	local v8=$( ft_init_cell 8)
+	echo -e "\033[0;33m\033[1m" 
+	echo "             ___________________"
+	echo "             |     |     |     |"
+	echo "             |  $v0  |  $v1  |  $v2  |"
+	echo "             |     |     |     |"
+	echo "             |_____|_____|_____|"
+	echo "             |     |     |     |"
+	echo "             |  $v3  |  $v4  |  $v5  |"
+	echo "             |     |     |     |"
+	echo "             |_____|_____|_____|"
+	echo "             |     |     |     |"
+	echo "             |  $v6  |  $v7  |  $v8  |"
+	echo "             |     |     |     |"
+	echo "             |-----------------|"
+	echo -e "\033[0m" 
+}
+
+# Checks if there is a winner
+# Arg1: player array - echo 1 if yes, else echo 0
+ft_check_win() {
+	local arr=("$@")
+	if [ "${arr[0]}" = "1" ] && [ "${arr[1]}" = "1" ] && [ "${arr[2]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[3]}" = "1" ] && [ "${arr[4]}" = "1" ] && [ "${arr[5]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[6]}" = "1" ] && [ "${arr[7]}" = "1" ] && [ "${arr[8]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[0]}" = "1" ] && [ "${arr[3]}" = "1" ] && [ "${arr[6]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[1]}" = "1" ] && [ "${arr[4]}" = "1" ] && [ "${arr[7]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[2]}" = "1" ] && [ "${arr[5]}" = "1" ] && [ "${arr[8]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[0]}" = "1" ] && [ "${arr[4]}" = "1" ] && [ "${arr[8]}" = "1" ]
+	then
+		echo 1
+	elif [ "${arr[2]}" = "1" ] && [ "${arr[4]}" = "1" ] && [ "${arr[6]}" = "1" ]
+	then
+		echo 1
+	else
+		echo 0
+	fi
+}
+
+# Checks if there is a deuce
+# No arg
+ft_check_deuce() {
+	local arr=("$@")
+	for value in "${arr[@]}"
+	do
+		if [ $value -eq 1 ]
+		then
+			echo 0
+			return 0
+		fi
+	done
+	echo 1
+}
+
+# Checks if the cell number given is ok
+# if ok echo 1 else echo 0
+ft_check_input() {
+	[ -n $1 ] && [ "$1" -eq "$1" ] 2>/dev/null
+	if [ $? -ne 0 ]
+	then
+		echo 0
+		return 0
+	fi
+	if [ $1 -lt 0 ] || [ $1 -gt 8 ]
+	then
+		echo 0
+		return 0
+	fi
+	if [ "${empty_cells[$1]}" = "0" ]
+	then
+		echo 0
+		return 0
+	fi
+	echo 1
+}
+
+# Main part of the program
+command clear
+ft_header
+restart="y"
+while [ "$restart" = "y" ]
+do
+	empty_cells=(1 1 1 1 1 1 1 1 1)
+	p1_cells=(0 0 0 0 0 0 0 0 0)
+	p1_char="X"
+	p2_cells=(0 0 0 0 0 0 0 0 0)
+	p2_char="@"
+	winner=0
+	turn=1
+	while [ $winner -eq 0 ]
+	do
+		check=0
+		ft_display
+		while [ $check -ne 1 ]
+		do
+			read -p "        Player $turn, select a cell: " choice
+			check=$( ft_check_input $choice )
+		done
+		empty_cells[$choice]=0
+		if [ $turn -eq 1 ]
+		then
+			p1_cells[$choice]=1
+			temp=$( ft_check_win "${p1_cells[@]}" )
+			if [ $temp = 1 ]
+			then
+				winner=1
+			else
+				turn=2
+			fi
+		else
+			p2_cells[$choice]=1
+			temp=$( ft_check_win "${p2_cells[@]}" )
+			if [ $temp -eq 1 ]
+			then
+				winner=2
+			else
+				turn=1
+			fi
+		fi
+		temp=$( ft_check_deuce "${empty_cells[@]}" )
+		echo "TEMP = $temp"
+		if [ $temp -eq 1 ] && [ $winner -eq 0 ]
+		then
+			winner=3
+		fi
+	done
+	command clear
+	ft_display
+	if [ $winner -eq 3 ]
+	then
+		echo -e "\033[1m        No winner. Does it mean that the two players were stupid?\033[0m"
+	else
+		echo -e "\033[1m        Player $winner has won. There is always a stupid player and a clever one!\033[0m"
+	fi
+	read -p "        Restart? (y/n) " restart
+done
+echo ""
+echo "        Bye bye, loser!"
+echo

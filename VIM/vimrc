@@ -1,0 +1,34 @@
+" VIM configuration - Madipoupou
+set nocompatible				" No compatibility with old VI
+call pathogen#infect()			" Activates pathogen package manager
+autocmd vimenter * NERDTree		" Activates NERDTree when starting VIM
+autocmd Filetype html set omnifunc=htmlcomplete#CompleteTags
+
+" --DISPLAY
+set title						" Update window (or terminal title)
+set number						" Line number
+set ruler						" Cursor position
+set wrap						" Lines which are too long are wrapped
+set scrolloff=3					" Displays a minimum of three line around cursor (scroll easier)
+syntax enable					" Syntax color
+filetype on						" File type specific behaviour
+filetype plugin on
+filetype indent on
+
+" --SEARCH
+set ignorecase					" No case
+set smartcase					" If the search contains a MAJ it is taken in account
+set incsearch					" Highlights the results while writing
+set hlsearch					" Highlights the results
+
+" --BEEP
+set noerrorbells				" Stops the bell 2
+
+" --VARIOUS
+set backspace=indent,eol,start	" Backspace usual behaviour
+set hidden						" Hides files when opening other files
+set mouse=a						" Activates the mouse capture
+
+" --THEME
+"set background=dark
+colorscheme archery

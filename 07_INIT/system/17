@@ -1,0 +1,3 @@
+#!/bin/sh
+# Commande pour se connecter en SSH a la VM depuis le MAC Hote
+ssh mhotting:127.0.0.1 -P 8091

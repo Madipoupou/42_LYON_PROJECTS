@@ -1,0 +1,3 @@
+#!/bin/sh
+# Redemarrer service SSH
+systemctl restart sshd

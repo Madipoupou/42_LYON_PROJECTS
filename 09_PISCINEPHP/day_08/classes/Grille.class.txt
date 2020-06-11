@@ -1,0 +1,22 @@
+<- Grille ----------------------------------------------------------------------
+
+La classe grille permet de gérer un grille (un tableau en deux dimensions)
+servant de repère aux éléments du jeu.
+
+Pour construire une grille: __construct($width, $height)
+où width et height sont les tailles de la grille construite.
+
+La grille dispose d'une méthode de rendu en chaîne de caractères
+toString qui permet de récupérer une grille au format html.
+
+Trois méthodes se proposent à vous:
+-resetMatrix(): retourne un tableau à deux dimensions de la taille de
+la grille, ne contenant que des 0;
+-getMatrix(): permet de récupérer la matrice de la grille;
+-setMatrix($matrix): permet de sauvegarder une nouvelle matrice dans une objet
+grille;
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Grille ->

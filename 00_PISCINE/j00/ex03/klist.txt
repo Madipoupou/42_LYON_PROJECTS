@@ -1,0 +1,8 @@
+Credentials cache: API:37105
+        Principal: mhotting@LE-101.FR
+
+  Issued                Expires               Principal
+Jul  2 10:29:15 2018  Jul  2 20:29:15 2018  krbtgt/LE-101.FR@LE-101.FR
+Jul  2 10:29:16 2018  Jul  2 20:29:15 2018  ldap/ldap-master.le-101.fr@LE-101.FR
+Jul  2 10:29:16 2018  Jul  2 20:29:15 2018  HTTP/storage-student.le-101.fr@LE-101.FR
+Jul  2 12:31:29 2018  Jul  2 20:29:15 2018  host/vogsphere.le-101.fr@LE-101.FR

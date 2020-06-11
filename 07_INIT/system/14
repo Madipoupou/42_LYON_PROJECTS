@@ -1,0 +1,3 @@
+#!/bin/sh
+# On lance une commance en background avec &
+sudo tail -f /var/log/syslog &

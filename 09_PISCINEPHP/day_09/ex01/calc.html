@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calc</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            border: 2px solid blueviolet;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="">
+            <table>
+                <tr>
+                <td><input type="text" name="n1"/></td>
+                <td>
+                    <select name="op">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+                <td><input type="text" name="n2"/></td>
+                <td><input type="submit" value="Try me !" /></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+<script>
+    function disp_alert(message) {
+        alert(message);
+        console.log(message);
+        return ;
+    }
+    document.querySelector("form").addEventListener("submit", function() {
+        event.preventDefault();
+
+        // Récupération des données
+        var n1 = this.querySelector('input[name="n1"]').value;
+        var n2 = this.querySelector('input[name="n2"]').value;
+        var op = this.querySelector('select[name="op"]').value;
+
+        // Tests d'erreur
+        n1f = parseInt(n1);
+        n2f = parseInt(n2);
+        if (n1f != n1 || n2f != n2 || n1f < 0 || n2f < 0) {
+            disp_alert("Error :(");
+            return ;
+        }
+        if (op != '+' && op != '-' && op != '*' && op != '/' && op != '%') {
+            disp_alert("Error :(");
+            return ;
+        }
+        if ((op === '/' || op === '%') && n2f === 0) {
+            disp_alert("It’s over 9000!");
+            return ;
+        }
+
+        // Calcul
+        switch (op) {
+            case '+':
+                    disp_alert((n1f + n2f).toString());
+                    break ;
+                case '-':
+                    disp_alert((n1f - n2f).toString());
+                    break ;
+                case '*':
+                    disp_alert((n1f * n2f).toString());
+                    break ;
+                case '/':
+                    disp_alert((n1f / n2f).toString());
+                    break ;
+                case '%':
+                    disp_alert((n1f % n2f).toString());
+                    break ;
+        }
+    });
+    // Gestion de l'alerte régulière
+    setInterval(function() { alert("Please, use me..."); }, 30000);
+</script>
+
+</html>

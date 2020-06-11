@@ -1,0 +1,21 @@
+<- Arme ----------------------------------------------------------------------
+
+Classe de gestion des armes.
+Classe abstraite servant de modèle à de armes qui héritent d'elle.
+
+Cette classe abstraite définit un constructeur qui attend un objet du
+type Vaisseau.
+
+Deux méthodes sont disponibles par défaut:
+-getDegat() qui retourne un entier correspondant aux dégâts que peut
+faire l'arme;
+-getPortee() qui retourne la portée de l'arme;
+
+Si vous utilisez cette classe, vous devez vous assurer de lui transmettre
+le(s) bons arguments à la construction: la gestion des types n'est pas
+encore effective et des erreurs imprévues pourraient survenir.
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Arme ->

@@ -1,0 +1,27 @@
+<- Partie ----------------------------------------------------------------------
+
+C'est la calsse principale du jeu, celle qui permet de générer
+un instance d'une partie lorsque celle-ci commence.
+
+Pour construire une partie: __construct($name1, $name2)
+où name1 et name2 sont les noms des joueurs de la partie.
+
+Des méthods sont à votre disposition:
+-majVaisseau(): l'instance va parcourir la flotte de chacun des joueurs
+et mettre à jour la grille en fonction de l'évolution de celle-ci;
+-finTour(): va placer le tour sur le joueur suivant en remettant à jour
+les panneaux d'information des joueurs;
+
+Des getters sont à votre disposition:
+-getGrille() 
+-getCurrent()
+-getPanneau()
+-getJoueur($nbJ)
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+NB2: Pour vous aider à debugger, cette classe propose un attribut statique versbose
+qui, s'il est "True" permet d'afficher des informations sur la crétion et 
+la desctruction de la partie.
+
+---------------------------------------------------------------------- Partie ->

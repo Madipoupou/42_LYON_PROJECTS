@@ -1,0 +1,4 @@
+#!/bin/sh
+# Commande pour lister les partitions des disques
+# (alternative: fdisk -l)
+df

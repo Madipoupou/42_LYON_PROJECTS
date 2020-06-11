@@ -1,0 +1,216 @@
+/* GLOBAL STUFF */
+body {
+	font-family: Monospace;
+	display: flex;
+	flex-direction:
+	column;
+	align-items:
+	center;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+span {
+	display: block;
+}
+
+
+/* FOOTER */
+#footer {
+	margin-top: 2em;
+	border-top: 1px solid black;
+	width: 100%;
+}
+
+#footer p {
+	text-align: right;
+	font-style: italic;
+	font-family: monospace;
+}
+
+#footer img {
+	display: block;
+	margin: auto;
+	width: 150px;
+	height: 150px;
+}
+
+
+/* TABLE PROPERTIES */
+table {
+	margin: auto;
+}
+
+.empty {
+	border: none;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.green {
+	background-color: green;
+}
+
+.gray {
+	background-color: gray;
+}
+
+.blue {
+	background-color: lightblue;
+}
+
+.purple {
+	background-color: violet;
+}
+
+.other {
+	background-color: indianred;
+}
+
+td {
+	border: 1px solid black;
+}
+
+.elt {
+	text-align: center;
+	font-weight: bold;
+}
+
+.poids {
+	text-align: right;
+}
+
+.num {
+	text-align: left;
+}
+
+
+/* PROPERTIES DEPENDING ON MEDIA */
+@media only screen and (min-width: 1024px) {
+	table, td {
+		border-spacing: 0.5em;
+	}
+
+	td {
+		max-width: 50px;
+		width: 6em;
+		height: 6em;
+		padding: 0 0.3em 0 0.3em;
+	}
+
+	#content {
+		margin-top: 2em;
+		width: 100%;
+	}
+
+	.elt {
+		font-size: 2em;
+	}
+
+	.poids {
+		font-size: 0.8em;
+	}
+
+	.num {
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+	table, td {
+		border-spacing: 0.2em;
+	}
+
+	td {
+		max-width: 40px;
+		width: 5em;
+		height: 4em;
+		padding: 0 0.2em 0 0.2em;
+	}
+
+	#content {
+		margin-top: 2em;
+		width: 100%;
+	}
+
+	.elt {
+		font-size: 1.5em;
+	}
+
+	.poids {
+		font-size: 0.7em;
+	}
+
+	.num {
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and(min-width: 541px) and (max-width: 768px) {
+	table, td {
+		border-spacing: 0em;
+	}
+
+	td {
+		max-width: 40px;
+		width: 4em;
+		height: 4em;
+		padding: 0 0.2em 0 0.2em;
+	}
+
+	#content {
+		margin-top: 2em;
+		width: 100%;
+	}
+
+	.elt {
+		font-size: 1.2em;
+	}
+
+	.poids {
+		font-size: 0.6em;
+	}
+
+	.num {
+		font-size: 0.6em;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	table, td {
+		border-spacing: 0em;
+	}
+
+	td {
+		max-width: 40px;
+		width: 3em;
+		height: 2em;
+		padding: 0 0.1em 0 0.1em;
+	}
+
+	#content {
+		margin-top: 2em;
+		width: 100%;
+	}
+
+	.elt {
+		font-size: 1em;
+	}
+
+	.poids {
+		font-size: 0.5em;
+	}
+
+	.num {
+		font-size: 0.5em;
+	}
+}

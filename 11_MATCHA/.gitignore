@@ -1,0 +1,5 @@
+APP/node_modules
+APP/util/hidden.js
+DATABASE_DOCKER/log.txt
+DATABASE_DOCKER/.data/*
+APP/public/images

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Identifier le gateway par defaut dans la table de routage
+netstat -nr | grep default | grep en0

@@ -1,0 +1,22 @@
+<- Joueur ----------------------------------------------------------------------
+
+Permet de manipuler des joueurs.
+
+Pour créer un joueur: __construct($partie, $name, $nb, $xinit, $yinit, $dir)
+où partie est une instance de Partie, name le nom du joueur, nb le nombre de
+vaisseaux que le joueur aura au départ, xinit et yinit les coordonnées de la
+la flotte du joueur et dir la direction initiale de la flotte.
+
+Des getters sont disponibles:
+-getName()
+-getPanneau()
+-getPartie()
+-getFlotte()
+
+La fonction nouvPanneau() permet de créer une nouvelle instance de Panneau
+pour le joueur en récupérant les informations nécessaires.
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Joueur ->

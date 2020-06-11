@@ -1,0 +1,13 @@
+<- Blaster ----------------------------------------------------------------------
+
+Blaster est une classe héritant de la classe arme.
+Pour en apprendre plus sur le comportement de Blaster, veuillez vous reporter
+à la documentation concernant la classe Arme.
+
+Le seul ajout, pour le moment, est l'initialisation des attributs
+propres à l'arme, à savoir ses dégâts et sa portée.
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Blaster ->

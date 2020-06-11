@@ -1,0 +1,2 @@
+# Fichier contenant l'IP du serveur DNS utilise
+/etc/resolv.conf

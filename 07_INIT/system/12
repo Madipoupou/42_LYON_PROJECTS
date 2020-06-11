@@ -1,0 +1,3 @@
+#!/bin/sh
+# Determiner la taille des dossiers de /var de facon comprehensible (en root):
+sudo du -sh /var/*

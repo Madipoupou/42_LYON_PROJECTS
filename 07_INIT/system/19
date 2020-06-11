@@ -1,0 +1,21 @@
+# Les services dont il est question sont aussi appeles Daemon
+# La commande pour les lister est: ls /etc/init.d
+apache-htcacheclean
+apache2
+avahi-daemon
+console-setup.sh
+cron
+cups
+cups-browsed
+dbus
+hwclock.sh
+keyboard-setup.sh
+kmod
+networking
+procps
+rsyslog
+saned
+ssh
+sudo
+udev
+x11-common

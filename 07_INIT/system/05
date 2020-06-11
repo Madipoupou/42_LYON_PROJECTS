@@ -1,0 +1,3 @@
+#!/bin/sh
+# Etat du service SSH
+systemctl status sshd

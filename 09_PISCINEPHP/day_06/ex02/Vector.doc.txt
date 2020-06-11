@@ -1,0 +1,36 @@
+<- Vector ----------------------------------------------------------------------
+
+A class to manage your vectors.
+You need to include the Vertex and the Color classes to make it work.
+
+A vector is constructed using an array as argument:
+- the key 'dest' of this array is a vertex, the "end" of the vector;
+- the key 'orig' is the origine vertex (optional, defualt set to < 0, 0, 0>;
+
+The following methods are available:
+    - Returns the magnitude of the vector
+        magnitude()
+    - Returns a normalized copy of the vector
+        normalize()
+    - Returns a copy of the addition of this and the vector given as an argument
+        add( Vector $rhs )
+    - Returns a copy of the substraction of this and the vector given as an argument
+        sub( Vector $rhs )
+    - Returns a Vector which is the opposite
+        opposite()
+    - Returns the scalar product of this and the arg
+        scalarProduct( $k )
+    - Returns the scalar product of this and the arg vectore
+        dotProduct( Vector $rhs )
+    - Returns cos of angle between this and arg vector
+        cos( Vector $rhs )
+    - Returns the cross product of this and arg vector
+        crossProduct( Vector $rhs )
+
+The getters for x, y and z (axis magnitudes) are available.
+
+An attribute called "verbose" is a boolean, default set to False
+By setting it to true you can display more info on the class mechanics.
+
+NB: the control of the data types is up to you (except for the origin Vertex)
+---------------------------------------------------------------------- Vector ->

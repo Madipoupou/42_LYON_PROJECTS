@@ -1,0 +1,3 @@
+#!/bin/sh
+# Ajouter utilisateur localement
+sudo adduser testuser

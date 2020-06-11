@@ -1,0 +1,3 @@
+#!/bin/sh
+# Savoir depuis quand le sys est en marche
+uptime

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Commande pour renommer le systeme (non permanente)
+sudo hostname newname

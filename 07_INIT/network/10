@@ -1,0 +1,3 @@
+#!/bin/sh
+# Identifier les appareils entre le poste et le domaine slash16.org
+traceroute slash16.org

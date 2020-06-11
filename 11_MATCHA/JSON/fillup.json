@@ -1,0 +1,11 @@
+{
+	"gender":"male",
+	"age": 28,
+	"orientation":"hetero",
+	"bio":"salut je m'appelle madric et je suis bg",
+	"interests": [
+		"basket",
+		"video-games",
+		"venir qu'une fois par mois en cours"
+	]
+}

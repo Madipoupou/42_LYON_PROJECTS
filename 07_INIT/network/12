@@ -1,0 +1,3 @@
+#!/bin/sh
+# Trouver l'IP attribuee par les serveur DHCP
+ipconfig getifaddr en0

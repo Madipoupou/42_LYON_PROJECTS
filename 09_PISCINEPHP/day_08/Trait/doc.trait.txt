@@ -1,0 +1,9 @@
+<- doc ----------------------------------------------------------------------
+
+Ce trait permet d'incorporer dans des classes une fonction doc().
+Cette fonction va récupérer, dans une chaine de caractère, le contenu
+de la documentation concernant la classe à partir de laquelle
+doc() est appelée. Si la documentation n'existe pas, c'est un message d'erreur
+qui sera proposé.
+
+---------------------------------------------------------------------- doc ->

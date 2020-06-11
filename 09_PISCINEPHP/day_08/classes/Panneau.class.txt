@@ -1,0 +1,22 @@
+<- Panneau ----------------------------------------------------------------------
+
+Gestion du panneau des joueurs: le panneau est la zone d'information
+et d'interaction du joueur. C'est grâce au panneau que le joueur 
+peut interagir avec le jeu.
+
+Pour construire un panneau: __construct($joueur)
+où joueur est une instance de Joueur et est en fait le joueur
+auquel le panneau sera associé.
+
+De même que pour Grille, cette calsse propose une redéfinition de la méthode
+__toString() pour proposer à l'utilisateur un format exploitable en HTML.
+
+Deux méthodes sont à votre disposition:
+-getCoup(): pour connaitre le nombre de coups restants au joueur;
+-coupFini($nb): pour réduire le nombre de coup restant de nb, lorsqu'un action
+est terminée;
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Panneau ->

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Classification périodique des éléments</title>
+	<style>
+		body { font-family: Monospace; display: flex; flex-direction: column; align-items: center; }
+		h1 { text-align: center; text-decoration: underline; }
+		#content { margin-top: 2em; width: 100%; }
+		table { margin: auto; }
+		table, td { border-spacing: 0.5em; }
+		td { border: 1px solid black; max-width: 50px; width: 6em; height: 6em; padding: 0 0.3em 0 0.3em; }
+		span { display: block; }
+		.empty { border: none; }
+		.elt { font-size: 2em; text-align: center; font-weight: bold; }
+		.poids { text-align: right; font-size: 0.7em; }
+		.num { text-align: left; font-size: 0.8em; }
+		#footer { margin-top: 2em; border-top: 1px solid black; width: 100%; }
+		#footer p { text-align: right; font-style: italic; font-family: monospace; }
+		#footer img { display: block; margin: auto; width: 150px; height: 150px; }
+		.yellow { background-color: yellow; }
+		.orange { background-color: orange; }
+		.green { background-color: green; }
+		.gray { background-color: gray; }
+		.blue { background-color: lightblue; }
+		.purple { background-color: violet; }
+		.other { background-color: indianred; }
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Classification périodique des éléments.</h1>
+	</div>
+	<div id="content">
+		<table>
+			<tr>
+				<td class="yellow">
+					<span class="poids">1</span>
+					<span class="elt">H</span>
+					<span class="num">1</span>
+				</td>
+				<td class="empty" colspan="16"></td>
+				<td class="gray">
+					<span class="poids">4</span>
+					<span class="elt">He</span>
+					<span class="num">2</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow">
+					<span class="poids">6</span>
+					<span class="elt">Li</span>
+					<span class="num">3</span>
+				</td>
+				<td class="orange">
+					<span class="poids">9</span>
+					<span class="elt">Be</span>
+					<span class="num">4</span>
+				</td>
+				<td class="empty" colspan="10"></td>
+				<td class="other">
+					<span class="poids">10</span>
+					<span class="elt">B</span>
+					<span class="num">5</span>
+				</td>
+				<td class="other">
+					<span class="poids">12</span>
+					<span class="elt">C</span>
+					<span class="num">6</span>
+				</td>
+				<td class="other">
+					<span class="poids">14</span>
+					<span class="elt">N</span>
+					<span class="num">7</span>
+				</td>
+				<td class="other">
+					<span class="poids">15</span>
+					<span class="elt">O</span>
+					<span class="num">8</span>
+				</td>
+				<td class="green">
+					<span class="poids">18</span>
+					<span class="elt">F</span>
+					<span class="num">9</span>
+				</td>
+				<td class="gray">
+					<span class="poids">20</span>
+					<span class="elt">Ne</span>
+					<span class="num">10</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow">
+					<span class="poids">22</span>
+					<span class="elt">Na</span>
+					<span class="num">11</span>
+				</td>
+				<td class="orange">
+					<span class="poids">24</span>
+					<span class="elt">Mg</span>
+					<span class="num">12</span>
+				</td>
+				<td class="empty" colspan="10"></td>
+				<td class="other">
+					<span class="poids">26</span>
+					<span class="elt">Al</span>
+					<span class="num">13</span>
+				</td>
+				<td class="other">
+					<span class="poids">28</span>
+					<span class="elt">Si</span>
+					<span class="num">14</span>
+				</td>
+				<td class="other">
+					<span class="poids">30</span>
+					<span class="elt">P</span>
+					<span class="num">15</span>
+				</td>
+				<td class="other">
+					<span class="poids">32</span>
+					<span class="elt">S</span>
+					<span class="num">16</span>
+				</td>
+				<td class="green">
+					<span class="poids">35</span>
+					<span class="elt">Cl</span>
+					<span class="num">17</span>
+				</td>
+				<td class="gray">
+					<span class="poids">39</span>
+					<span class="elt">Ar</span>
+					<span class="num">18</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow">
+					<span class="poids">39</span>
+					<span class="elt">K</span>
+					<span class="num">19</span>
+				</td>
+				<td class="orange">
+					<span class="poids">40</span>
+					<span class="elt">Ca</span>
+					<span class="num">20</span>
+				</td>
+				<td class="other">
+					<span class="poids">44</span>
+					<span class="elt">Sc</span>
+					<span class="num">21</span>
+				</td>
+				<td class="other">
+					<span class="poids">47</span>
+					<span class="elt">Ti</span>
+					<span class="num">22</span>
+				</td>
+				<td class="other">
+					<span class="poids">50</span>
+					<span class="elt">V</span>
+					<span class="num">23</span>
+				</td>
+				<td class="other">
+					<span class="poids">51</span>
+					<span class="elt">Cr</span>
+					<span class="num">24</span>
+				</td>
+				<td class="other">
+					<span class="poids">54</span>
+					<span class="elt">Mn</span>
+					<span class="num">25</span>
+				</td>
+				<td class="other">
+					<span class="poids">55</span>
+					<span class="elt">Fe</span>
+					<span class="num">26</span>
+				</td>
+				<td class="other">
+					<span class="poids">58</span>
+					<span class="elt">Co</span>
+					<span class="num">27</span>
+				</td>
+				<td class="other">
+					<span class="poids">58</span>
+					<span class="elt">Ni</span>
+					<span class="num">28</span>
+				</td>
+				<td class="other">
+					<span class="poids">63</span>
+					<span class="elt">Cu</span>
+					<span class="num">29</span>
+				</td>
+				<td class="other">
+					<span class="poids">65</span>
+					<span class="elt">Zn</span>
+					<span class="num">30</span>
+				</td>
+				<td class="other">
+					<span class="poids">69</span>
+					<span class="elt">Ga</span>
+					<span class="num">31</span>
+				</td>
+				<td class="other">
+					<span class="poids">72</span>
+					<span class="elt">Ge</span>
+					<span class="num">32</span>
+				</td>
+				<td class="other">
+					<span class="poids">74</span>
+					<span class="elt">As</span>
+					<span class="num">33</span>
+				</td>
+				<td class="other">
+					<span class="poids">78</span>
+					<span class="elt">Se</span>
+					<span class="num">34</span>
+				</td>
+				<td class="green">
+					<span class="poids">79</span>
+					<span class="elt">Br</span>
+					<span class="num">35</span>
+				</td>
+				<td class="gray">
+					<span class="poids">83</span>
+					<span class="elt">Kr</span>
+					<span class="num">36</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow">
+					<span class="poids">85</span>
+					<span class="elt">Rb</span>
+					<span class="num">37</span>
+				</td>
+				<td class="orange">
+					<span class="poids">87</span>
+					<span class="elt">Sr</span>
+					<span class="num">38</span>
+				</td>
+				<td class="other">
+					<span class="poids">88</span>
+					<span class="elt">Y</span>
+					<span class="num">39</span>
+				</td>
+				<td class="other">
+					<span class="poids">91</span>
+					<span class="elt">Zr</span>
+					<span class="num">40</span>
+				</td>
+				<td class="other">
+					<span class="poids">92</span>
+					<span class="elt">Nb</span>
+					<span class="num">41</span>
+				</td>
+				<td class="other">
+					<span class="poids">95</span>
+					<span class="elt">Mo</span>
+					<span class="num">42</span>
+				</td>
+				<td class="other">
+					<span class="poids">98</span>
+					<span class="elt">Tc</span>
+					<span class="num">43</span>
+				</td>
+				<td class="other">
+					<span class="poids">101</span>
+					<span class="elt">Ru</span>
+					<span class="num">44</span>
+				</td>
+				<td class="other">
+					<span class="poids">102</span>
+					<span class="elt">Rh</span>
+					<span class="num">45</span>
+				</td>
+				<td class="other">
+					<span class="poids">106</span>
+					<span class="elt">Pd</span>
+					<span class="num">46</span>
+				</td>
+				<td class="other">
+					<span class="poids">107</span>
+					<span class="elt">Ag</span>
+					<span class="num">47</span>
+				</td>
+				<td class="other">
+					<span class="poids">112</span>
+					<span class="elt">Cd</span>
+					<span class="num">48</span>
+				</td>
+				<td class="other">
+					<span class="poids">114</span>
+					<span class="elt">In</span>
+					<span class="num">49</span>
+				</td>
+				<td class="other">
+					<span class="poids">118</span>
+					<span class="elt">Sn</span>
+					<span class="num">50</span>
+				</td>
+				<td class="other">
+					<span class="poids">121</span>
+					<span class="elt">Sb</span>
+					<span class="num">51</span>
+				</td>
+				<td class="other">
+					<span class="poids">127</span>
+					<span class="elt">Te</span>
+					<span class="num">52</span>
+				</td>
+				<td class="green">
+					<span class="poids">126</span>
+					<span class="elt">I</span>
+					<span class="num">53</span>
+				</td>
+				<td class="gray">
+					<span class="poids">131</span>
+					<span class="elt">Xe</span>
+					<span class="num">54</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow">
+					<span class="poids">132</span>
+					<span class="elt">Cs</span>
+					<span class="num">55</span>
+				</td>
+				<td class="orange">
+					<span class="poids">137</span>
+					<span class="elt">Ba</span>
+					<span class="num">56</span>
+				</td>
+				<td class="empty"></td>
+				<td class="other">
+					<span class="poids">178</span>
+					<span class="elt">Hf</span>
+					<span class="num">72</span>
+				</td>
+				<td class="other">
+					<span class="poids">180</span>
+					<span class="elt">Ta</span>
+					<span class="num">73</span>
+				</td>
+				<td class="other">
+					<span class="poids">183</span>
+					<span class="elt">W</span>
+					<span class="num">74</span>
+				</td>
+				<td class="other">
+					<span class="poids">186</span>
+					<span class="elt">Re</span>
+					<span class="num">75</span>
+				</td>
+				<td class="other">
+					<span class="poids">190</span>
+					<span class="elt">Os</span>
+					<span class="num">76</span>
+				</td>
+				<td class="other">
+					<span class="poids">192</span>
+					<span class="elt">Ir</span>
+					<span class="num">77</span>
+				</td>
+				<td class="other">
+					<span class="poids">195</span>
+					<span class="elt">Pt</span>
+					<span class="num">78</span>
+				</td>
+				<td class="other">
+					<span class="poids">196</span>
+					<span class="elt">Au</span>
+					<span class="num">79</span>
+				</td>
+				<td class="other">
+					<span class="poids">200</span>
+					<span class="elt">Hg</span>
+					<span class="num">80</span>
+				</td>
+				<td class="other">
+					<span class="poids">204</span>
+					<span class="elt">Tl</span>
+					<span class="num">81</span>
+				</td>
+				<td class="other">
+					<span class="poids">207</span>
+					<span class="elt">Pb</span>
+					<span class="num">82</span>
+				</td>
+				<td class="other">
+					<span class="poids">208</span>
+					<span class="elt">Bi</span>
+					<span class="num">83</span>
+				</td>
+				<td class="other">
+					<span class="poids">209</span>
+					<span class="elt">Po</span>
+					<span class="num">84</span>
+				</td>
+				<td class="green">
+					<span class="poids">210</span>
+					<span class="elt">At</span>
+					<span class="num">85</span>
+				</td>
+				<td class="gray">
+					<span class="poids">222</span>
+					<span class="elt">Rn</span>
+					<span class="num">86</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow">
+					<span class="poids">223</span>
+					<span class="elt">Fr</span>
+					<span class="num">87</span>
+				</td>
+				<td class="orange">
+					<span class="poids">226</span>
+					<span class="elt">Ra</span>
+					<span class="num">88</span>
+				</td>
+				<td class="empty"></td>
+				<td class="other">
+					<span class="poids">267</span>
+					<span class="elt">Rf</span>
+					<span class="num">104</span>
+				</td>
+				<td class="other">
+					<span class="poids">268</span>
+					<span class="elt">Db</span>
+					<span class="num">105</span>
+				</td>
+				<td class="other">
+					<span class="poids">269</span>
+					<span class="elt">Sg</span>
+					<span class="num">106</span>
+				</td>
+				<td class="other">
+					<span class="poids">270</span>
+					<span class="elt">Bh</span>
+					<span class="num">107</span>
+				</td>
+				<td class="other">
+					<span class="poids">277</span>
+					<span class="elt">Hs</span>
+					<span class="num">108</span>
+				</td>
+				<td class="other">
+					<span class="poids">278</span>
+					<span class="elt">Mt</span>
+					<span class="num">109</span>
+				</td>
+				<td class="other">
+					<span class="poids">281</span>
+					<span class="elt">Ds</span>
+					<span class="num">110</span>
+				</td>
+				<td class="other">
+					<span class="poids">282</span>
+					<span class="elt">Rg</span>
+					<span class="num">111</span>
+				</td>
+				<td class="other">
+					<span class="poids">285</span>
+					<span class="elt">Cn</span>
+					<span class="num">112</span>
+				</td>
+				<td class="other">
+					<span class="poids">286</span>
+					<span class="elt">Nh</span>
+					<span class="num">113</span>
+				</td>
+				<td class="other">
+					<span class="poids">289</span>
+					<span class="elt">Fl</span>
+					<span class="num">114</span>
+				</td>
+				<td class="other">
+					<span class="poids">289</span>
+					<span class="elt">Mc</span>
+					<span class="num">115</span>
+				</td>
+				<td class="other">
+					<span class="poids">293</span>
+					<span class="elt">Lv</span>
+					<span class="num">116</span>
+				</td>
+				<td class="green">
+					<span class="poids">294</span>
+					<span class="elt">Ts</span>
+					<span class="num">117</span>
+				</td>
+				<td class="gray">
+					<span class="poids">294</span>
+					<span class="elt">Og</span>
+					<span class="num">118</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="empty" colspan="3"></td>
+				<td class="blue">
+					<span class="poids">138</span>
+					<span class="elt">La</span>
+					<span class="num">57</span>
+				</td>
+				<td class="blue">
+					<span class="poids">140</span>
+					<span class="elt">Ce</span>
+					<span class="num">58</span>
+				</td>
+				<td class="blue">
+					<span class="poids">140</span>
+					<span class="elt">Pr</span>
+					<span class="num">59</span>
+				</td>
+				<td class="blue">
+					<span class="poids">144</span>
+					<span class="elt">Nd</span>
+					<span class="num">60</span>
+				</td>
+				<td class="blue">
+					<span class="poids">145</span>
+					<span class="elt">Pm</span>
+					<span class="num">61</span>
+				</td>
+				<td class="blue">
+					<span class="poids">150</span>
+					<span class="elt">Sm</span>
+					<span class="num">62</span>
+				</td>
+				<td class="blue">
+					<span class="poids">151</span>
+					<span class="elt">Eu</span>
+					<span class="num">63</span>
+				</td>
+				<td class="blue">
+					<span class="poids">157</span>
+					<span class="elt">Gd</span>
+					<span class="num">64</span>
+				</td>
+				<td class="blue">
+					<span class="poids">158</span>
+					<span class="elt">Tb</span>
+					<span class="num">65</span>
+				</td>
+				<td class="blue">
+					<span class="poids">162</span>
+					<span class="elt">Dy</span>
+					<span class="num">66</span>
+				</td>
+				<td class="blue">
+					<span class="poids">164</span>
+					<span class="elt">Ho</span>
+					<span class="num">67</span>
+				</td>
+				<td class="blue">
+					<span class="poids">167</span>
+					<span class="elt">Er</span>
+					<span class="num">68</span>
+				</td>
+				<td class="blue">
+					<span class="poids">168</span>
+					<span class="elt">Tm</span>
+					<span class="num">69</span>
+				</td>
+				<td class="blue">
+					<span class="poids">173</span>
+					<span class="elt">Yb</span>
+					<span class="num">70</span>
+				</td>
+				<td class="blue">
+					<span class="poids">174</span>
+					<span class="elt">Lu</span>
+					<span class="num">71</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="empty" colspan="3"></td>
+				<td class="purple">
+					<span class="poids">227</span>
+					<span class="elt">Ac</span>
+					<span class="num">89</span>
+				</td>
+				<td class="purple">
+					<span class="poids">232</span>
+					<span class="elt">Th</span>
+					<span class="num">90</span>
+				</td>
+				<td class="purple">
+					<span class="poids">231</span>
+					<span class="elt">Pa</span>
+					<span class="num">91</span>
+				</td>
+				<td class="purple">
+					<span class="poids">238</span>
+					<span class="elt">U</span>
+					<span class="num">92</span>
+				</td>
+				<td class="purple">
+					<span class="poids">237</span>
+					<span class="elt">Np</span>
+					<span class="num">93</span>
+				</td>
+				<td class="purple">
+					<span class="poids">244</span>
+					<span class="elt">Pu</span>
+					<span class="num">94</span>
+				</td>
+				<td class="purple">
+					<span class="poids">243</span>
+					<span class="elt">Am</span>
+					<span class="num">95</span>
+				</td>
+				<td class="purple">
+					<span class="poids">247</span>
+					<span class="elt">Cm</span>
+					<span class="num">96</span>
+				</td>
+				<td class="purple">
+					<span class="poids">247</span>
+					<span class="elt">Bk</span>
+					<span class="num">97</span>
+				</td>
+				<td class="purple">
+					<span class="poids">251</span>
+					<span class="elt">Cf</span>
+					<span class="num">98</span>
+				</td>
+				<td class="purple">
+					<span class="poids">252</span>
+					<span class="elt">Es</span>
+					<span class="num">99</span>
+				</td>
+				<td class="purple">
+					<span class="poids">257</span>
+					<span class="elt">Fm</span>
+					<span class="num">100</span>
+				</td>
+				<td class="purple">
+					<span class="poids">258</span>
+					<span class="elt">Md</span>
+					<span class="num">101</span>
+				</td>
+				<td class="purple">
+					<span class="poids">259</span>
+					<span class="elt">No</span>
+					<span class="num">102</span>
+				</td>
+				<td class="purple">
+					<span class="poids">266</span>
+					<span class="elt">Lr</span>
+					<span class="num">103</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="footer">
+		<p>© mhotting 2019</p>
+		<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Face_Emoji_87fdae9b-b2af-4619-a37f-e484c5e2e7a4_large.png?v=1480481059" alt="smile">
+	</div>
+</body>
+</html>

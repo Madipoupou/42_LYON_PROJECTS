@@ -1,0 +1,3 @@
+#!/bin/sh
+# Afficher espace utilise sur le sys. de facon comprehensible
+df -h

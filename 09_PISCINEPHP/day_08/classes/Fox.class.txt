@@ -1,0 +1,13 @@
+<- Fox ----------------------------------------------------------------------
+
+Fox est une classe héritant de la classe vaisseau.
+Elle n'implémente rien de particulier pour le moment, vous pouvez
+donc vous référer à la documentation de Vaisseau pour connaître son
+comportement.
+
+ATTENTION: Fox est une classe "finale" et ne peut donc être héritée.
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Fox ->

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Lister les packages installes sur le machine
+dpkg-query -l

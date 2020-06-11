@@ -1,0 +1,25 @@
+<- Render ----------------------------------------------------------------------
+
+// Constructor
+function __construct( array $kwargs ) {
+
+// doc method
+public static function doc()
+
+// Displays a render as vertex
+function renderVertex( Vertex $screenVertex )
+
+// Displays a render as edge
+public function renderEdge(Vertex $a, Vertex $b)
+
+// Displays a triangle
+function renderTriangle( Triangle $triangle, $mode )
+
+// Saves the PNG image created using $this->_filename
+function develop()
+
+An attribute called "verbose" is a boolean, default set to False
+By setting it to true you can display more info on the class mechanics.
+
+NB: the control of the data types is up to you (except for the origin Vertex)
+---------------------------------------------------------------------- Render ->

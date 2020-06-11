@@ -1,0 +1,3 @@
+#!/bin/sh
+# Trouver les processus en cours d'execution
+top

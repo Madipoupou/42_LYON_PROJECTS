@@ -1,0 +1,24 @@
+<- Flotte ----------------------------------------------------------------------
+
+Flotte est une classe permettant de gérer une flotte d'objets de 
+type Vaisseau.
+
+Pour construire une flotte:
+__construct($nb, $xinit, $yinit, $dir)
+Ou nb est le nombre de vaisseaux, xinit et yinit le coordonnées initiales des
+vaisseaux et dir la direction initiale de la flotte.
+
+L'interface d'itération est implémentée et vous pouvez donc itérer
+sur un objet de type flotte: vous disposerez de chaque vaisseau, un à un.
+
+Des getters sont implémentés:
+-getVaisseau($index): renvoie le vaisseau se trouvant à l'index donné
+-getSize(): renvoie la taille de la flotte
+
+Une méthode update() vérifie l'état de chaque vaisseau et retire ceux qui sont
+détruits de la flotte.
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Flotte ->

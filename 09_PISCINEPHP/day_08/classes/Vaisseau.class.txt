@@ -1,0 +1,36 @@
+<- Vaisseau ----------------------------------------------------------------------
+
+Class permettant de créer des vaisseaux.
+ATTENTION: cette classe est abstraite et sert de modèles à des vaisseaux plus
+spécifiques.
+
+Pour construire un vaisseau:  __construct($xinit, $yinit, $dir)
+où xinit et yinit sont les coordonnées du vaisseau et dir sa direction initiale.
+
+Une fonction de déplacement vous est proposée: move($axe, $coeff)
+où axe est "x" ou "y" permettant de spécifier l'axe sur lequel le mouvement doit
+se faire et coeff est 1 ou -1 pour déterminer le sens de déplacement.
+Le déplacement est proportionnel à la vitesse du vaisseau.
+
+Des actions sont possibles:
+-tirer($ennemi): pour tirer sur un joueur ennemi (type Joueur). La flotte entière sera 
+visée et si une cible est atteinte elle en subira les dégâts...
+-subir($degat): si le vaisseau est touché, il encaisse des dégâts;
+-load(): pour recharger le bouclier du vaisseau de un point;
+
+Les getters sont les suivants:
+-getName()
+-getXpos()
+-getYpos()
+-getHeight()
+-getWidth()
+-getVie()
+-getVitesse()
+-getBouclier()
+-getDir()
+-getArme()
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Vaisseau ->

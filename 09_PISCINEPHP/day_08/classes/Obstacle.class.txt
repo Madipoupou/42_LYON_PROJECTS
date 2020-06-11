@@ -1,0 +1,20 @@
+<- Obstacle ----------------------------------------------------------------------
+
+Gestion des obstacles.
+Dans la version actuelle les obstacles sont visuels et n'ont aucun impact sur
+le jeu.
+
+Pour construire un obstacle: __construct($x, $y, $w, $h)
+où x et y sont les coordonnées du point supérieur gauche de l'obstacle
+et w et h ses caractéristiques de taille.
+
+Des getters sont à disposition:
+-getXpos()
+-getYpos()
+-getHeight()
+-getWidth()
+
+NB: Une méthode statique est proposée (doc()) afin de consulter la
+documentation quand bon vous semble.
+
+---------------------------------------------------------------------- Obstacle ->

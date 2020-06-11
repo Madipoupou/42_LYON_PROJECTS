@@ -1,0 +1,17 @@
+<- Triangle ----------------------------------------------------------------------
+
+// Constructor requires three vertex
+function __construct( array $kargvs )
+
+// doc method
+public static function doc() {
+
+// Getters
+function getA()
+function getB()
+function getC()
+An attribute called "verbose" is a boolean, default set to False
+By setting it to true you can display more info on the class mechanics.
+
+NB: the control of the data types is up to you (except for the origin Vertex)
+---------------------------------------------------------------------- Triangle ->

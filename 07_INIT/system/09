@@ -1,0 +1,3 @@
+#!/bin/sh
+# Savoir quelle personne est connectee au systeme
+who

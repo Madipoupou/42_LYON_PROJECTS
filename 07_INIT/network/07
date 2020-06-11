@@ -1,0 +1,3 @@
+#!/bin/sh
+# Interroger DNS externe sur le domaine slash16.org
+nslookup slash16.org 8.8.8.8

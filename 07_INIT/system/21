@@ -1,0 +1,3 @@
+#!/bin/sh
+# Afficher tous les utilisateurs "reels" de la machine
+cat /etc/passwd | grep /home | cut -f1 -d':'

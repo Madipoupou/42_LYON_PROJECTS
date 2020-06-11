@@ -1,0 +1,28 @@
+<- Camera ----------------------------------------------------------------------
+
+Camera management
+
+// Constructor
+function __construct(array $kwargs)
+The array should have keys:
+'origin' -> vertex for tranlation origin
+'orientation' -> matrix for rotation
+'width' ->  width of course
+'height' -> ""
+'ratio'
+'fov'
+'near'
+'far' -> the last four are for the projection
+
+// doc function, returns the documentation about the Class
+public static function doc() {
+
+// Converts "world vertex" into "screen vertex" displayable
+public function watchVertex( Vertex $worldVertex )
+
+The objects can evaluate the camera projection for a real world object
+An attribute called "verbose" is a boolean, default set to False
+By setting it to true you can display more info on the class mechanics.
+
+NB: the control of the data types is up to you (except for the origin Vertex)
+---------------------------------------------------------------------- Camera ->

@@ -1,0 +1,5 @@
+En utilisant la commande traceroute, on constate que la premiere adresse IP qui n'est pas interne au reseau est 100.64.40.1.
+Nous considerons que l'exterieur est "l'exterieur du batiment"
+On peut donc en conclure que l'adresse 192.168.255.1 correspond a la passerelle entre le le batiment et l'exterieur. C'est probablement un routeur NAT qui va repartir differentes adresses IP aux membres du reseau interne au batiment.
+
+Si on avait considere que l'exterieur etait le batiment (donc qu'on ne traitait que le-101), alors le routeur NAT aurait ete la passerelle ayant pour adresse 10.60.1.1

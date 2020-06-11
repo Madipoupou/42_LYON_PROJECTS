@@ -1,0 +1,47 @@
+<- Matrix ----------------------------------------------------------------------
+
+Different types of matrix:
+- const IDENTITY = 'IDENTITY';
+- const SCALE = 'SCALE';
+- const RX = 'Ox ROTATION';
+- const RY = 'Oy ROTATION';
+- const RZ = 'Oz ROTATION';
+- const TRANSLATION = 'TRANSLATION';
+- const PROJECTION = 'PROJECTION';
+- const PRODUCT = 'PRODUCT';
+- const TRANSPOSE = 'TRANSPOSE';
+
+The constructor needs an array.
+The keys for the array are:
+'preset' for the type (look at constants at the top of doc file)
+'scale' if scale matrix
+'angle if rot matrix
+'vtc', if translation, a Vector
+'prod' if product between matrix
+'fov',
+'near'
+ratio'
+'far' the last four are for projections
+
+// Constructor
+function __construct(array $kwargs)
+// Matrix initializers
+private function ft_init_scale($kwargs) {
+
+// doc function, returns the documentation about the Class
+public static function doc() {
+
+// Get the matrix value at index $i, $j
+public function getIndex($i, $j)
+
+// Returns the matrix corresponding to this * arg matrix
+function mult( Matrix $rhs )
+
+// Returns a Vertex corresponding to this matrix applied to arg vertex
+function transformVertex( Vertex $vtx )
+
+An attribute called "verbose" is a boolean, default set to False
+By setting it to true you can display more info on the class mechanics.
+
+NB: the control of the data types is up to you (except for the origin Vertex)
+---------------------------------------------------------------------- Matrix ->

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Script d'affichage formate du contenu de /etc/passwd
+cat /etc/passwd | cut -f1,3,6 -d':'

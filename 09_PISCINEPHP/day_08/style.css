@@ -1,0 +1,65 @@
+#hideAll
+ {
+   position: fixed;
+   left: 0px; 
+   right: 0px; 
+   top: 0px; 
+   bottom: 0px; 
+   background-color: white;
+   z-index: 99; /* Higher than anything else in the document */
+
+ }
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#j1p, #j2p {
+    border: 1px solid black;
+    width: 20em;
+    height: 45.5em;
+    margin: 5px;
+}
+
+#grille {
+    margin: 5px;
+    width: 80em;
+    height: 46em;
+}
+
+h2 {
+    text-align: center;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    border: 1px solid black;
+    width: 0.28em;
+    height: 0.3em;
+}
+
+.vide {
+    background-color: white;
+}
+
+.j1 {
+    background-color: red;
+}
+
+.j2 {
+    background-color: blue;
+}
+
+.obs {
+    background-color: black;
+}

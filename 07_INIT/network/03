@@ -1,0 +1,3 @@
+#!/bin/sh
+# Identifier adresse MAC de la carte wifi
+ifconfig en1 | grep ether | cut -f2 -d' '
